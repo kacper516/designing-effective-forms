@@ -92,20 +92,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     e.preventDefault();
     new bootstrap.Modal(modal).show();
   });
-
-  const signOutButton = document.getElementById("signOutButton");
-  let isLoggedIn = false;
-
-  signOutButton.addEventListener("click", (e) => {
-    if (!isLoggedIn) {
-      e.preventDefault();
-      alert("Nie możesz się wylogować, ponieważ nie jesteś zalogowany.");
-    }
-  });
-
-  const signInButton = document.getElementById("signInButton");
-  signInButton.addEventListener("click", () => {
-    isLoggedIn = true;
-    alert("Zalogowano pomyślnie!");
-  });
 });
